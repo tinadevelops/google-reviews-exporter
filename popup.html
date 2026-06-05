@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Reviews Exporter</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Reviews Exporter</h1>
+
+    <div id="status" class="status hidden"></div>
+
+    <div id="controls">
+      <div class="field">
+        <label for="format">Export Format</label>
+        <select id="format">
+          <option value="csv">CSV</option>
+          <option value="json">JSON</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="maxReviews">Max Reviews</label>
+        <select id="maxReviews">
+          <option value="50">50</option>
+          <option value="100" selected>100</option>
+          <option value="250">250</option>
+          <option value="500">500</option>
+          <option value="0">All</option>
+        </select>
+      </div>
+
+      <button id="scrapeBtn" class="btn primary">Scrape Reviews</button>
+      <button id="exportBtn" class="btn" disabled>Export</button>
+    </div>
+
+    <div id="preview" class="hidden">
+      <p id="reviewCount"></p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
